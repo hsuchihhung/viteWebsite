@@ -1,0 +1,72 @@
+a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+p {
+  font-size: 16px;
+}
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/*排版專用*/
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 372px;
+  }
+}
+
+/*通用*/
+.bgc-theme-color {
+  background-color: #aa0601;
+}
+.bgc-light {
+  background-color: #fbf2f2;
+}
+.bgc-white {
+  background-color: white;
+}
+.font-dark-color {
+  color: #650300;
+}
+.font-light-color {
+  color: #aa0601;
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+.fz-24 {
+  font-size: 24px;
+}
+.fz-36 {
+  font-size: 36px;
+}
+.fz-48 {
+  font-size: 48px;
+}
+.fz-64 {
+  font-size: 64px;
+}
+.fz-roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}

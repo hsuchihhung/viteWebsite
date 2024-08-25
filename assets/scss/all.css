@@ -1,3 +1,395 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+}
+
+p {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/*排版專用*/
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 372px;
+  }
+}
+/*通用*/
+.bgc-theme-color {
+  background-color: #aa0601;
+}
+
+.bgc-light {
+  background-color: #fbf2f2;
+}
+
+.bgc-white {
+  background-color: white;
+}
+
+.font-dark-color {
+  color: #650300;
+}
+
+.font-light-color {
+  color: #aa0601;
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-24 {
+  font-size: 24px;
+}
+
+.fz-36 {
+  font-size: 36px;
+}
+
+.fz-48 {
+  font-size: 48px;
+}
+
+.fz-64 {
+  font-size: 64px;
+}
+
+.fz-roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .nav {
+    padding: 12px 0;
+  }
+}
+.nav .nav-logo {
+  width: 80px;
+  height: auto;
+}
+.nav .nav-logo:hover {
+  transform: scale(1.2);
+}
+.nav .nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+.nav .nav-list a {
+  padding: 8px 32px;
+}
+.nav .nav-list a:hover {
+  font-size: 24px;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .nav-list {
+    width: 100%;
+  }
+  .nav-logo {
+    margin: 16px 12px;
+  }
+  .nav .nav-list li {
+    width: 50%;
+    text-align: center;
+    padding: 0;
+  }
+  .nav-list li a {
+    padding: 12px 0;
+    width: 100%;
+    border: 1px solid white;
+    font-size: 16px;
+  }
+  .nav .nav-list a:hover {
+    font-size: 16px;
+    background-color: #650300;
+  }
+}
+/* footer部分 */
+.footer {
+  padding-top: 48px;
+}
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 24px;
+  }
+}
+.footer .footer-right {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding-bottom: 32px;
+}
+.footer .footer-right .nav {
+  margin-bottom: 36px;
+  display: flex;
+}
+.footer .footer-right .nav a:hover {
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .footer .footer-right .nav {
+    display: none;
+  }
+}
+.footer .footer-right .contact-method a:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 767px) {
+  .footer .footer-right .contact-method a {
+    font-size: 16px;
+  }
+}
+.footer .footer-right .contact-method a .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: white;
+  margin-right: 16px;
+  font-size: 36px;
+  vertical-align: middle;
+}
+@media (max-width: 767px) {
+  .footer .footer-right .contact-method a .material-symbols-outlined {
+    font-size: 18px;
+  }
+}
+.footer .footer-right .social-media {
+  display: flex;
+}
+.footer .footer-right .social-media img {
+  width: 48px;
+  margin-left: 32px;
+}
+@media (max-width: 992px) {
+  .footer .footer-right .social-media img {
+    width: 40px;
+    margin-left: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .footer .footer-right .social-media img {
+    width: 24px;
+    margin-left: 8px;
+  }
+}
+.footer .footer-right .social-media img:hover {
+  transform: scale(1.2);
+}
+.footer .copy-right {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 0;
+  color: white;
+}
+@media (max-width: 767px) {
+  .footer .copy-right {
+    flex-direction: column;
+    padding: 24px 0;
+  }
+}
+.footer .copy-right p {
+  margin-bottom: 8px;
+}
+.footer .copy-right .copy-right-content {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .footer .copy-right .copy-right-content {
+    flex-direction: column;
+  }
+}
+.footer .copy-right .copy-right-content a {
+  padding: 0px 24px;
+}
+.footer .copy-right .copy-right-content a:hover {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .footer .copy-right .copy-right-content a {
+    padding: 0;
+  }
+}
+.footer .copy-right .copy-right-content .pd-r {
+  padding-right: 0;
+}
+
 .banner {
   background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true");
   background-repeat: no-repeat;
@@ -13,9 +405,11 @@
   align-items: end;
   justify-content: center;
 }
+
 .banner a {
   padding: 6px 12px;
 }
+
 .banner a:hover {
   background-color: #650300;
 }
@@ -26,7 +420,6 @@
     background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true");
   }
 }
-
 @media (max-width: 576px) {
   .banner {
     height: 396px;
@@ -38,7 +431,6 @@
     font-size: 24px;
   }
 }
-
 /* 用專業的心部分 */
 .benefits {
   padding: 80px 0;
@@ -64,6 +456,7 @@
   padding-left: 12px;
   padding-right: 12px;
 }
+
 .benefits-card-list li h3 {
   font-size: 24px;
   font-weight: bold;
@@ -96,17 +489,18 @@
     width: 100%;
   }
 }
-
 /* 經典系列鏡框部分 */
 .classic {
   padding: 80px 0;
 }
+
 .classic h2 {
   font-size: 48px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 48px;
 }
+
 .classic-card-row {
   display: flex;
   flex-wrap: wrap;
@@ -119,9 +513,11 @@
   width: 33.3333%;
   padding: 0px 12px;
 }
+
 .classic-card img {
   margin-bottom: 8px;
 }
+
 .classic-card h3 {
   font-size: 48px;
 }
@@ -148,7 +544,6 @@
     width: 100%;
   }
 }
-
 /* 聯名設計鏡框部分 */
 .co-branding {
   background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true");
@@ -157,6 +552,7 @@
   background-position: center;
   padding: 80px 0;
 }
+
 .co-branding h2 {
   font-size: 48px;
   color: white;
@@ -164,6 +560,7 @@
   margin-bottom: 48px;
   text-align: center;
 }
+
 .co-branding-card-list {
   display: flex;
   flex-wrap: wrap;
@@ -199,16 +596,13 @@
   .co-branding {
     background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-md.png?raw=true");
   }
-
   .co-branding-card-list li {
     width: 100%;
   }
-
   .co-branding-card-list li:not(:first-child) {
     margin-top: 24px;
   }
 }
-
 @media (max-width: 576px) {
   .co-branding {
     padding: 40px 0;
@@ -224,11 +618,11 @@
     background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2-sm.png?raw=true");
   }
 }
-
 /* 顧客推薦 */
 .recommend {
   padding: 80px 0;
 }
+
 .recommend .recommend-title {
   text-align: center;
   color: #650300;
@@ -241,9 +635,10 @@
   display: flex;
   gap: 24px;
 }
+
 .recommend-card-row .recommend-card {
   border: 1px solid #dee2e6;
-  box-shadow: 0px 2px 6px #00000029;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1607843137);
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -263,6 +658,7 @@
 .recommend-card .customer-name {
   margin-bottom: 8px;
 }
+
 .date {
   margin-top: auto;
   color: #707070;
@@ -277,7 +673,6 @@
     width: calc(50% - 12px);
   }
 }
-
 @media (max-width: 576px) {
   .recommend {
     padding: 40px 0;
@@ -293,25 +688,28 @@
     width: 100%;
   }
 }
-
 /* 表單部分 */
 .contact {
   padding: 80px 0;
 }
+
 .contact-us {
   font-size: 48px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 48px;
 }
+
 .contact p {
   font-size: 20px;
   margin-bottom: 24px;
 }
+
 .container-contact {
   max-width: 636px;
   margin: 0 auto;
 }
+
 @media (max-width: 992px) {
   .container-contact {
     max-width: 576px;
@@ -339,15 +737,18 @@ textarea {
   background: #fbf2f2;
   width: 100%;
 }
+
 .contact label {
   margin-bottom: 8px;
 }
+
 .contact input {
   height: 36px;
   padding: 6px 0px 6px 12px;
   margin-bottom: 16px;
   border: 1px solid black;
 }
+
 .contact textarea {
   height: 136px;
   resize: none;
@@ -355,6 +756,7 @@ textarea {
   border: 1px solid black;
   margin-bottom: 16px;
 }
+
 .contact .privacy-checkbox {
   width: 20px;
   height: 20px;
@@ -363,15 +765,18 @@ textarea {
   margin-bottom: 3px;
   display: inline-block;
 }
+
 .contact .privacy-label {
   vertical-align: middle;
   display: inline;
 }
+
 .button {
   display: flex;
   justify-content: center;
   margin-top: 48px;
 }
+
 .button button {
   color: white;
   padding: 16px 0;
@@ -382,4 +787,4 @@ textarea {
 .button button:hover {
   background-color: #650300;
   cursor: pointer;
-}
+}/*# sourceMappingURL=all.css.map */
